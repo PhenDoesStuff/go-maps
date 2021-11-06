@@ -7,19 +7,27 @@ func main() {
 	// var colors map[string]string
 
 	// Pretty much equivalent to the code above
-	colors := make(map[string]string)
+	// colors := make(map[string]string)
 
 	// Can add something to the map with the code below
-	colors["white"] = "#ffffff"
+	// colors["white"] = "#ffffff"
 
-	// colors := map[string]string{
-	// 	"red": "#ff0000",
-	// 	"green": "#008000",
-	// }
+
+	colors := map[string]string{
+		"red": "#ff0000",
+		"green": "#008000",
+		"white": "#ffffff",
+	}
 
 
 	// Built in delete function to remove something from a map
-	delete(colors, "white")
+	// delete(colors, "white")
 
-	fmt.Println(colors)
+	printMap(colors)
+}
+
+func printMap(c map[string]string) {
+	for color, hex := range c {
+		fmt.Println("Hex code for", color, "is ", hex)
+	}
 }
